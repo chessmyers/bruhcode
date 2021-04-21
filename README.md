@@ -3,7 +3,7 @@
 
 ### Your first Bruhcode program:
 ```
-yooo "Hello, World!"
+yooo 👀Hello, World!👀
 ```
 
 ### Language features:
@@ -13,4 +13,17 @@ yooo "Hello, World!"
 - Hella other features
 
 
-### Data 
+### Data Types
+
+##### Boolean
+- Yea
+- Nah
+
+##### Number
+- 1.0
+- 5
+- -100
+
+##### String
+- 👀Whats good👀
+- 👀👀
