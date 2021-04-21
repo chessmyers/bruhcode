@@ -16,17 +16,16 @@ class Scanner
       token RIGHT_BRACE: /^}$/
       token COMMA: /^,$/
       token DOT: /^\.$/
-      token MINUS: /^-$/
+      token MINUS: /^nahnoneof$/
       token PLUS: /^andsum$/
       token SEMICOLON: /^;$/
       token TIMES: /^hella$/
       token DIV: %r{^/$}
 
-      token BANG: /^!$/
+      token BANG: /^breh$/
       token BANG_EQUAL: /^def_isnt$/
 
-      token EQUAL: /^=$/
-      token IS: /^is$/
+      token EQUAL: /^is$/
       # token EQUAL_EQUAL: /^==$/
       token EQUAL_EQUAL: /^is_totally$/
 

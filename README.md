@@ -6,7 +6,7 @@
 
 ### Your first Bruhcode program:
 ```
-yooo 👀Hello, World!👀
+yooo "Hello, World!"
 ```
 
 ### Language features:
@@ -46,7 +46,21 @@ Examples:
 `like today is 👀Friday!👀`, `like the_temperature is 90`
 
 ##### Math
-``
+Addition:
+
+`4 andsum 5`
+
+Subtraction:
+
+`10 nahnoneof 5`
+
+Multiplication:
+
+`5 hella 3`
+
+Division:
+
+`40 / 15`
 
 
 
