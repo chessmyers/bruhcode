@@ -17,18 +17,18 @@ class Scanner
       token COMMA: /^,$/
       token DOT: /^\.$/
       token MINUS: /^-$/
-      token PLUS: /^\+$/
+      token PLUS: /^andsum$/
       token SEMICOLON: /^;$/
-      token TIMES: /^\*$/
+      token TIMES: /^hella$/
       token DIV: %r{^/$}
 
       token BANG: /^!$/
-      token BANG_EQUAL: /^!=$/
+      token BANG_EQUAL: /^def_isnt$/
 
       token EQUAL: /^=$/
       token IS: /^is$/
-      token EQUAL_EQUAL: /^==$/
-      token IS_TOTALLY: /^is_totally$/
+      # token EQUAL_EQUAL: /^==$/
+      token EQUAL_EQUAL: /^is_totally$/
 
       token LESS_THAN: /^<$/
       token LESS_THAN_EQUAL: /^<=$/

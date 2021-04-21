@@ -1,6 +1,9 @@
 # Bruhcode 🤙
 ## The official programming language of California!
 
+![logo](logo.png)
+
+
 ### Your first Bruhcode program:
 ```
 yooo 👀Hello, World!👀
@@ -42,7 +45,8 @@ Examples:
 Examples:
 `like today is 👀Friday!👀`, `like the_temperature is 90`
 
-
+##### Math
+``
 
 
 

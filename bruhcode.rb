@@ -51,7 +51,7 @@ class BruhCode
     if token.name == :EOF
       report(token.line, ' at end', message)
     else
-      report(token.line, " at '#{token.lexeme}'", message)
+      report(token.line, " at '#{token.value}'", message)
     end
   end
 

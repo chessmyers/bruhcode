@@ -69,7 +69,7 @@ class Parser
   def factor
     expr = unary
 
-    while match(:DIVIDE, :MULTIPLY)
+    while match(:DIV, :TIMES)
       operator = previous
       right = unary
       expr = Expression::Binary.new(expr, operator, right)

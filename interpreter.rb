@@ -35,6 +35,10 @@ class Interpreter < Expression::Visitor
     left = evaluate(expr.left)
     right = evaluate(expr.right)
 
+    left = left.to_f if numeric?(left)
+    right = right.to_f if numeric?(right)
+
+
     case expr.operator.name
     when :GREATER_THAN
       check_number_operands(expr.operator, left, right)
@@ -104,5 +108,9 @@ class Interpreter < Expression::Visitor
     return if left.is_a?(Numeric) && right.is_a?(Numeric)
 
     raise "#{operator} requires two numbers"
+  end
+
+  def numeric?(val)
+    val.match(/\A[+-]?\d+?(_?\d+)*(\.\d+e?\d*)?\Z/) == nil ? false : true
   end
 end
