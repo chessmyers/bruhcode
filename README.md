@@ -16,8 +16,8 @@ yooo 👀Hello, World!👀
 ### Data Types
 
 ##### Boolean
-- Yea
-- Nah
+- yea
+- nah
 
 ##### Number
 - 1.0
@@ -27,3 +27,17 @@ yooo 👀Hello, World!👀
 ##### String
 - 👀Whats good👀
 - 👀👀
+
+### Syntax
+
+##### Printing
+`yooo VALUE_TO_PRINT`
+
+Examples:
+`yooo 5`, `yooo 👀Whats up??👀`
+
+##### Variables
+`like VARIABLE_NAME is VALUE`
+
+Examples:
+`like today is 👀Friday!👀`, `like the_temperature is 90`
