@@ -41,3 +41,14 @@ Examples:
 
 Examples:
 `like today is 👀Friday!👀`, `like the_temperature is 90`
+
+
+
+
+
+### Personal Learning takeaways
+- Regular expressions
+- Nested classes in ruby
+- Using visitor pattern in Ruby
+- Recursive descent parsers
+- Using splat operator
