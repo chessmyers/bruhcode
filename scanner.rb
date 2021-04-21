@@ -19,7 +19,8 @@ class Scanner
       token MINUS: /^-$/
       token PLUS: /^\+$/
       token SEMICOLON: /^;$/
-      token STAR: /^\*$/
+      token TIMES: /^\*$/
+      token DIV: %r{^/$}
 
       token BANG: /^!$/
       token BANG_EQUAL: /^!=$/
@@ -35,7 +36,6 @@ class Scanner
       token GREATER_THAN: /^>$/
       token GREATER_THAN_EQUAL: /^>=$/
 
-      token DIV: %r{^/$}
       token NUMBER: /^\d+\.?\d?$/
 
       # Identifiers

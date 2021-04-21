@@ -93,7 +93,7 @@ class Parser
     return Expression::Literal.new(true) if match :TRUE
     return Expression::Literal.new(nil) if match :NULL
 
-    return Expression::Literal.new(previous.literal) if match(:NUMBER, :STRING)
+    return Expression::Literal.new(previous.value) if match(:NUMBER, :STRING)
 
     if match(:LEFT_PAREN)
       expr = expression
@@ -120,9 +120,9 @@ class Parser
     advance
 
     until is_at_end
-      return if previous.type == :SEMICOLON
+      return if previous.name == :SEMICOLON
 
-      case peek.type
+      case peek.name
       when :CLASS
       when :FUN
       when :VAR
@@ -141,7 +141,7 @@ class Parser
   def check(token_type)
     return false if is_at_end
 
-    peek.type == token_type
+    peek.name == token_type
   end
 
   def match(*token_types)
@@ -161,7 +161,7 @@ class Parser
   end
 
   def is_at_end
-    peek.type == :EOF
+    peek.nil? || peek.name == :EOF
   end
 
   def peek

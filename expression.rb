@@ -1,5 +1,24 @@
 class Expression
 
+  # Visitor interface
+  class Visitor
+    def visit_literal_expr
+      raise NotImplementedError, 'Must implement visit_literal_expr'
+    end
+
+    def visit_literal_expr
+      raise NotImplementedError, 'Must implement visit_literal_expr'
+    end
+
+    def visit_binary_expr
+      raise NotImplementedError, 'Must implement visit_binary_expr'
+    end
+
+    def visit_unary_expr
+      raise NotImplementedError, 'Must implement visit_unary_expr'
+    end
+  end
+
   # Represents a binary expression (left hand and right hand operator)
   class Binary < Expression
     attr_reader :left, :operator, :right
@@ -8,6 +27,10 @@ class Expression
       @left = left
       @operator = operator
       @right = right
+    end
+
+    def accept(visitor)
+      visitor.visit_binary_expr(self)
     end
   end
 
@@ -19,6 +42,10 @@ class Expression
       @expression = expression
     end
 
+    def accept(visitor)
+      visitor.visit_grouping_expr(self)
+    end
+
   end
 
   # Represents a literal expression, such as a number or string
@@ -27,6 +54,10 @@ class Expression
 
     def initialize(value)
       @value = value
+    end
+
+    def accept(visitor)
+      visitor.visit_literal_expr(self)
     end
   end
 
@@ -37,6 +68,10 @@ class Expression
     def initialize(operator, right)
       @operator = operator = operator
       @right = right
+    end
+
+    def accept(visitor)
+      visitor.visit_unary_expr(self)
     end
   end
 

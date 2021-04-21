@@ -1,8 +1,16 @@
 require_relative 'scanner'
+require_relative 'interpreter'
+require_relative 'parser'
 # Represents the main module of the interpreter
 class BruhCode
 
-  attr_accessor :had_error
+  attr_accessor :had_error, :had_runtime_error, :interpreter
+
+  def initialize
+    @had_error = false
+    @had_runtime_error = false
+    @interpreter = Interpreter.new
+  end
 
   def main
     puts 'Welcome to Bruhcode v1.0'
@@ -25,6 +33,8 @@ class BruhCode
 
     return if had_error
 
+    interpreter.interpret expression
+
 
   end
 
@@ -38,11 +48,17 @@ class BruhCode
   end
 
   def self.token_error(token, message)
-    if token.type == :EOF 
+    if token.name == :EOF
       report(token.line, ' at end', message)
     else
       report(token.line, " at '#{token.lexeme}'", message)
     end
+  end
+
+  def self.runtime_error(error)
+    puts "bruh we're totally donzezo... there was a runtime error: "
+    puts error
+    @had_runtime_error = true
   end
 
 end
